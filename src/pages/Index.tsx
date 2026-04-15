@@ -1,10 +1,11 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Users, Award, AlertTriangle, TrendingUp, Search, Sprout } from "lucide-react";
+import { Users, Award, AlertTriangle, TrendingUp, Search, Sprout, LogOut } from "lucide-react";
 import StatsCard from "@/components/StatsCard";
 import StudentRow from "@/components/StudentRow";
 import { mockStudents, getAttendancePercentage, getAttendanceStatus } from "@/data/students";
 import { Input } from "@/components/ui/input";
+import { useAuth } from "@/hooks/useAuth";
 
 const Index = () => {
   const [search, setSearch] = useState("");
