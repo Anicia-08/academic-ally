@@ -10,6 +10,7 @@ import { useAuth } from "@/hooks/useAuth";
 const Index = () => {
   const [search, setSearch] = useState("");
   const [filter, setFilter] = useState<"all" | "perfect" | "critical">("all");
+  const { user, signOut } = useAuth();
 
   const students = mockStudents
     .filter((s) => {
