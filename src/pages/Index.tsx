@@ -38,13 +38,25 @@ const Index = () => {
     <div className="min-h-screen bg-background">
       {/* Header */}
       <header className="border-b bg-card/80 backdrop-blur-sm sticky top-0 z-10">
-        <div className="container max-w-6xl mx-auto px-4 py-4 flex items-center gap-3">
-          <div className="rounded-lg bg-primary p-2">
-            <Sprout className="h-5 w-5 text-primary-foreground" />
+        <div className="container max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
+          <div className="flex items-center gap-3">
+            <div className="rounded-lg bg-primary p-2">
+              <Sprout className="h-5 w-5 text-primary-foreground" />
+            </div>
+            <div>
+              <h1 className="font-heading font-bold text-lg text-foreground">AttendAI</h1>
+              <p className="text-xs text-muted-foreground">Nurturing consistency, celebrating commitment</p>
+            </div>
           </div>
-          <div>
-            <h1 className="font-heading font-bold text-lg text-foreground">AttendAI</h1>
-            <p className="text-xs text-muted-foreground">Nurturing consistency, celebrating commitment</p>
+          <div className="flex items-center gap-3">
+            <span className="text-xs text-muted-foreground hidden sm:inline">{user?.email}</span>
+            <button
+              onClick={signOut}
+              className="flex items-center gap-1.5 rounded-lg bg-secondary px-3 py-2 text-xs font-medium text-secondary-foreground hover:bg-muted transition-colors"
+            >
+              <LogOut className="h-3.5 w-3.5" />
+              Sign out
+            </button>
           </div>
         </div>
       </header>
